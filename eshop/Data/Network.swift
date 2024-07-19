@@ -30,7 +30,9 @@ func fetchSingleProduct(pid: Int) async throws -> Product
         throw VPError.invalidResponse
     }
     do {
-        return try JSONDecoder().decode(Product.self, from: data)
+        var r: Product = try JSONDecoder().decode(Product.self, from: data)
+        print(r.id)
+        return r
     } catch {
         throw VPError.invalidData
     }
