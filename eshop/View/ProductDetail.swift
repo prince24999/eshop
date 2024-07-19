@@ -52,10 +52,10 @@ struct ProductDetail: View
                 {
                     Text((product?.title) ?? "")
                         .bold()
-                        .padding()
-                    Text("Price: $" + (String)((product?.price) ?? 0)).padding(.horizontal)
+                        .padding(.vertical)
+                    Text("Price: $" + (String)((product?.price) ?? 0))
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                    Text("Rating: " + (String)((product?.rating?.rate) ?? 0) + "/" + (String)((product?.rating?.count) ?? 0)).padding(.horizontal)
+                    Text("Rating: " + (String)((product?.rating?.rate) ?? 0) + "/" + (String)((product?.rating?.count) ?? 0))
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                     Text((product?.description) ?? "").padding()
                     Button(action: {}) {
@@ -66,7 +66,7 @@ struct ProductDetail: View
                                     .stroke(.blue, lineWidth: 1)
                             )
                     }
-                    .padding(.vertical)
+                    .padding()
                 }
                 
             }
