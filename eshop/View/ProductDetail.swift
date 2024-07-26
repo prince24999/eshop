@@ -54,9 +54,9 @@ struct ProductDetail: View
                         .bold()
                         .padding(.vertical)
                     Text("Price: $" + (String)((product?.price) ?? 0))
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading).padding(.horizontal)
                     Text("Rating: " + (String)((product?.rating?.rate) ?? 0) + "/" + (String)((product?.rating?.count) ?? 0))
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading).padding(.horizontal)
                     Text((product?.description) ?? "").padding()
                     Button(action: {}) {
                         Text("Add to Cart")

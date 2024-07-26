@@ -25,8 +25,7 @@ struct eshopApp: App {
                     }
                     .badge(1)
                 
-                Text("Profile")
-                    .font(.system(size: 40, weight: .bold, design: .default))
+                Profile()
                     .tabItem {
                         Image(systemName: "person.crop.circle")
                         Text("Profile")
